@@ -1,0 +1,23 @@
+{
+  "@@locale": "zh",
+  "appTitle": "kernel_config",
+  "welcome": "kernel_config欢迎您",
+  "cardCodeLabel": "请输入卡密",
+  "cardCodeHint": "请输入卡密",
+  "bindCodeLabel": "请输入绑定码",
+  "bindCodeHint": "请输入绑定码",
+  "loginButton": "登录",
+  "loginSuccess": "登录成功",
+  "loginFailed": "登录失败，请检查您的卡密",
+  "welcomeToUse": "欢迎使用 Kernel Config 工具",
+  "currentLanguage": "当前语言：{language}",
+  "@currentLanguage": {
+    "description": "显示当前语言",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "example": "简体中文"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "@@locale": "en",
+  "appTitle": "kernel_config",
+  "welcome": "Welcome to kernel_config",
+  "cardCodeLabel": "Enter card code",
+  "cardCodeHint": "Please enter card code",
+  "bindCodeLabel": "Enter bind code",
+  "bindCodeHint": "Please enter bind code",
+  "loginButton": "Login",
+  "loginSuccess": "Login Successful!",
+  "loginFailed": "Login failed, please check your codes",
+  "welcomeToUse": "Welcome to Kernel Config Tool",
+  "currentLanguage": "Current language: {language}",
+  "@currentLanguage": {
+    "description": "Displays the current language",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "example": "English"
+      }
+    }
+  }
+}

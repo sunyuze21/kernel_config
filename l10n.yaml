@@ -1,0 +1,8 @@
+arb-dir: lib/l10n
+template-arb-file: intl_en.arb  # 改为你实际的文件名
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+preferred-supported-locales:
+  - zh
+  - en
+use-escaping: true
