@@ -171,7 +171,9 @@ class _InitPageState extends State<InitPage> {
       final success = await initSystem();
 
       if (success) {
-        print("✅ 初始化成功，准备跳转...");
+        if (kDebugMode) {
+          print("✅ 初始化成功，准备跳转...");
+        }
 
         // 可选：稍微延迟一点，让成功状态更自然
         await Future.delayed(const Duration(milliseconds: 300));
@@ -182,7 +184,9 @@ class _InitPageState extends State<InitPage> {
         }
       } else {
         // 3. 返回 false 的情况
-        print("⚠️ 初始化返回 false");
+        if (kDebugMode) {
+          print("⚠️ 初始化返回 false");
+        }
         if (mounted) {
           setState(() {
             _isLoading = false;
@@ -229,13 +233,13 @@ class _InitPageState extends State<InitPage> {
           ),
 
         if (_isLoading)
-          const Column(
+          Column(
             children: [
-              CircularProgressIndicator(color: Colors.blue, strokeWidth: 4),
-              SizedBox(height: 16),
+              const CircularProgressIndicator(color: Colors.blue, strokeWidth: 4),
+              const SizedBox(height: 16),
               Text(
-                "正在初始化系统...",
-                style: TextStyle(color: Colors.grey, fontSize: 16),
+                l10n.initSystem,
+                style: const TextStyle(color: Colors.grey, fontSize: 16),
               ),
             ],
           )
