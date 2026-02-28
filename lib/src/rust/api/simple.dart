@@ -6,5 +6,13 @@
 import '../frb_generated.dart';
 import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 
-String greet({required String name}) =>
-    RustLib.instance.api.crateApiSimpleGreet(name: name);
+Future<Kconfig> getKernelConfigAst({
+  required String kernelRoot,
+  required String configPath,
+}) => RustLib.instance.api.crateApiSimpleGetKernelConfigAst(
+  kernelRoot: kernelRoot,
+  configPath: configPath,
+);
+
+// Rust type: RustOpaqueMoi<flutter_rust_bridge::for_generated::RustAutoOpaqueInner<Kconfig>>
+abstract class Kconfig implements RustOpaqueInterface {}

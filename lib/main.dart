@@ -1,13 +1,12 @@
-The original content is temporarily commented out to allow generating a self-contained demo - feel free to uncomment later.
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kernel_config/Login.dart'; // 确保你的登录页文件路径正确
 import 'package:kernel_config/tool.dart';
 import 'l10n/app_localizations.dart';
-
+import 'src/rust/frb_generated.dart';
 void main() {
+  RustLib.init();
   runApp(const KernelConfig());
 }
 
