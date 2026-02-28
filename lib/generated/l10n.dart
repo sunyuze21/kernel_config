@@ -54,6 +54,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Initializing system...`
+  String get initSystem {
+    return Intl.message(
+      'Initializing system...',
+      name: 'initSystem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Initialize`
+  String get initButton {
+    return Intl.message('Initialize', name: 'initButton', desc: '', args: []);
+  }
+
   /// `kernel_config`
   String get appTitle {
     return Intl.message('kernel_config', name: 'appTitle', desc: '', args: []);

@@ -9,6 +9,12 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get initSystem => '正在初始化系统...';
+
+  @override
+  String get initButton => '初始化';
+
+  @override
   String get appTitle => 'kernel_config';
 
   @override

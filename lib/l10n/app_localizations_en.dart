@@ -9,6 +9,12 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get initSystem => 'Initializing system...';
+
+  @override
+  String get initButton => 'Initialize';
+
+  @override
   String get appTitle => 'kernel_config';
 
   @override

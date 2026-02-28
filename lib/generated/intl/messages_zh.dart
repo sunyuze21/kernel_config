@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "cardCodeHint": MessageLookupByLibrary.simpleMessage("请输入卡密"),
     "cardCodeLabel": MessageLookupByLibrary.simpleMessage("请输入卡密"),
     "currentLanguage": m0,
+    "initButton": MessageLookupByLibrary.simpleMessage("初始化"),
+    "initSystem": MessageLookupByLibrary.simpleMessage("正在初始化系统..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("登录"),
     "loginFailed": MessageLookupByLibrary.simpleMessage("登录失败，请检查您的卡密"),
     "loginSuccess": MessageLookupByLibrary.simpleMessage("登录成功"),

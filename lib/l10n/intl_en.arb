@@ -1,4 +1,6 @@
 {
+  "initSystem": "Initializing system...",
+  "initButton":"Initialize",
   "@@locale": "en",
   "appTitle": "kernel_config",
   "welcome": "Welcome to kernel_config",

@@ -34,6 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "cardCodeLabel": MessageLookupByLibrary.simpleMessage("Enter card code"),
     "currentLanguage": m0,
+    "initButton": MessageLookupByLibrary.simpleMessage("Initialize"),
+    "initSystem": MessageLookupByLibrary.simpleMessage(
+      "Initializing system...",
+    ),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
     "loginFailed": MessageLookupByLibrary.simpleMessage(
       "Login failed, please check your codes",

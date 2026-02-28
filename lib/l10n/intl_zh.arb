@@ -1,4 +1,6 @@
 {
+  "initSystem": "正在初始化系统...",
+  "initButton":"初始化",
   "@@locale": "zh",
   "appTitle": "kernel_config",
   "welcome": "kernel_config欢迎您",

@@ -98,6 +98,18 @@ abstract class AppLocalizations {
     Locale('en'),
   ];
 
+  /// No description provided for @initSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'Initializing system...'**
+  String get initSystem;
+
+  /// No description provided for @initButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Initialize'**
+  String get initButton;
+
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
