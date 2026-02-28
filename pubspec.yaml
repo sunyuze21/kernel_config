@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   intl: any
   http: ^1.2.0
+  rust_lib_kernel_config:
+    path: rust_builder
+  flutter_rust_bridge: 2.11.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -47,6 +50,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  integration_test:
+    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

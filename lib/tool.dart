@@ -1,4 +1,4 @@
-﻿// lib/pages/tool_page.dart
+// lib/pages/tool_page.dart
 import 'package:flutter/material.dart';
 
 class ToolPage extends StatelessWidget {

@@ -104,7 +104,7 @@ class _LoginInputState extends State<LoginInput> {
             onPressed: () async {
               String kami = _cardController.text;
               String bind = _bindController.text;
-              
+
               try {
                 var res = await Login(kami, bind);
 
@@ -121,17 +121,20 @@ class _LoginInputState extends State<LoginInput> {
                   if (kDebugMode) {
                     print("登录失败，错误码: $res");
                   }
-                  var ress='未知错误！';
-                  if(res.startsWith('-83001') || res.startsWith('-83002')){
-                    ress='卡密不存在！';
+                  var ress = '未知错误！';
+                  if (res.startsWith('-83001') || res.startsWith('-83002')) {
+                    ress = '卡密不存在！';
                   }
-                  if(res.startsWith('-83008')){
-                    ress='绑定码错误！！';
+                  if (res.startsWith('-83008')) {
+                    ress = '绑定码错误！！';
                   }
-                  
+
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("登录失败: $ress"), backgroundColor: Colors.red),
+                      SnackBar(
+                        content: Text("登录失败: $ress"),
+                        backgroundColor: Colors.red,
+                      ),
                     );
                   }
                 }
@@ -142,7 +145,10 @@ class _LoginInputState extends State<LoginInput> {
                 }
                 if (mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text("发生错误: $e"), backgroundColor: Colors.red),
+                    SnackBar(
+                      content: Text("发生错误: $e"),
+                      backgroundColor: Colors.red,
+                    ),
                   );
                 }
               }

@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:http/http.dart' as http;
 
 /// 获取安全令牌
@@ -12,7 +11,7 @@ Future<String> Login(String card, String imei) async {
       'Softid': '7T1O8Q0S3O7R3R9A',
       'Card': card,
       'Version': '1.0',
-      'Mac':imei
+      'Mac': imei,
     },
   );
   return response.body;
