@@ -1,17 +1,15 @@
 # kernel_config
 
-A new Flutter project.
+一个正在开发的新的Linux内核配置工具
 
-## Getting Started
+## 前言
+这个项目的开发原因是我在给自己的电脑编译Linux内核时认为内核自带的配置工具并不好用，
+所以我就写了这个小工具
 
-This project is a starting point for a Flutter application.
+## 技术栈
+Flutter+Rust
 
-A few resources to get you started if this is your first Flutter project:
+使用flutter框架来确保拥有跨平台运行能力，底层解析内核配置使用了rust库来确保高性能读写
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 关于卡密验证
+软件完全免费且开源，卡密事实上可以随便输
