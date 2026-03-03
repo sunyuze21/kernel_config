@@ -1,4 +1,7 @@
 {
+  "back":"返回",
+  "error_bind_code":"绑定码错误！",
+  "error_no_kami":"卡密不存在!",
   "initSystem": "正在初始化系统...",
   "initButton":"初始化",
   "@@locale": "zh",

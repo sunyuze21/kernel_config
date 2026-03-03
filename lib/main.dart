@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:kernel_config/Login.dart'; // 确保你的登录页文件路径正确
+import 'package:kernel_config/Login.dart'; 
 import 'package:kernel_config/tool.dart';
 import 'l10n/app_localizations.dart';
 import 'src/rust/frb_generated.dart';
@@ -44,6 +44,7 @@ class _KernelConfigAppState extends State<KernelConfigApp> {
       routes: {
         '/login': (context) => const LoginPage(),
         '/tool': (context) => const ToolPage(), // 确保 ToolPage 在 tool.dart 中已定义
+        '/main': (context) => const KernelConfig(),
         // 如果有其他页面，继续在这里添加
         // '/settings': (context) => const SettingsPage(),
       },
@@ -145,7 +146,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// ================= InitPage =================
+
 class InitPage extends StatefulWidget {
   final VoidCallback onInitComplete;
 
@@ -159,7 +160,6 @@ class _InitPageState extends State<InitPage> {
   bool _isLoading = false;
   String? _errorMessage;
 
-  // 【核心修改】处理按钮点击：调用返回 bool 的 init 函数
   Future<void> _handleInit() async {
     setState(() {
       _isLoading = true;
@@ -167,24 +167,19 @@ class _InitPageState extends State<InitPage> {
     });
 
     try {
-      // 1. 调用你的初始化函数 (必须返回 Future<bool>)
-      // 请将下面的 initSystem() 替换为你实际调用的函数
       final success = await initSystem();
 
       if (success) {
         if (kDebugMode) {
           print("✅ 初始化成功，准备跳转...");
         }
-
-        // 可选：稍微延迟一点，让成功状态更自然
+        
         await Future.delayed(const Duration(milliseconds: 300));
-
-        // 2. 成功后执行回调 (跳转)
         if (mounted) {
           widget.onInitComplete();
         }
       } else {
-        // 3. 返回 false 的情况
+    
         if (kDebugMode) {
           print("⚠️ 初始化返回 false");
         }
@@ -202,7 +197,6 @@ class _InitPageState extends State<InitPage> {
         }
       }
     } catch (e) {
-      // 4. 捕获异常
       print("❌ 初始化发生异常: $e");
       if (mounted) {
         setState(() {
@@ -267,14 +261,6 @@ class _InitPageState extends State<InitPage> {
     );
   }
 }
-
-// ============================================================
-// 【重要】请在这里实现或导入你真实的 initSystem 函数
-// 它必须返回 Future<bool>
-// ============================================================
-
-/// 模拟初始化函数
-/// 真实场景中，请删除此函数，并导入你实际的业务逻辑函数
 Future<bool> initSystem() async {
   return true; // 默认返回成功
 }

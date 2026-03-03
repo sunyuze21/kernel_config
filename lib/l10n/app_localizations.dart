@@ -98,6 +98,24 @@ abstract class AppLocalizations {
     Locale('en'),
   ];
 
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'back'**
+  String get back;
+
+  /// No description provided for @error_bind_code.
+  ///
+  /// In en, this message translates to:
+  /// **'bind code error!'**
+  String get error_bind_code;
+
+  /// No description provided for @error_no_kami.
+  ///
+  /// In en, this message translates to:
+  /// **'License key not found!'**
+  String get error_no_kami;
+
   /// No description provided for @initSystem.
   ///
   /// In en, this message translates to:

@@ -9,6 +9,15 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get back => 'back';
+
+  @override
+  String get error_bind_code => 'bind code error!';
+
+  @override
+  String get error_no_kami => 'License key not found!';
+
+  @override
   String get initSystem => 'Initializing system...';
 
   @override

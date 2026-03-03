@@ -1,4 +1,7 @@
 {
+  "back":"back",
+  "error_bind_code":"bind code error!",
+  "error_no_kami":"License key not found!",
   "initSystem": "Initializing system...",
   "initButton":"Initialize",
   "@@locale": "en",

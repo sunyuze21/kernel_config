@@ -9,6 +9,15 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get back => '返回';
+
+  @override
+  String get error_bind_code => '绑定码错误！';
+
+  @override
+  String get error_no_kami => '卡密不存在!';
+
+  @override
   String get initSystem => '正在初始化系统...';
 
   @override

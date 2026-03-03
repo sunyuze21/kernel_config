@@ -11,6 +11,17 @@ class LoginPage extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/main');
+          },
+          tooltip: l10n.back, // 如果需要本地化的返回提示
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -36,7 +47,6 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-// 【修改点 1】改为 StatefulWidget
 class LoginInput extends StatefulWidget {
   const LoginInput({super.key});
 
@@ -45,7 +55,6 @@ class LoginInput extends StatefulWidget {
 }
 
 class _LoginInputState extends State<LoginInput> {
-  // 【修改点 2】控制器移到这里，作为状态成员变量
   late final TextEditingController _cardController;
   late final TextEditingController _bindController;
 
@@ -58,7 +67,6 @@ class _LoginInputState extends State<LoginInput> {
 
   @override
   void dispose() {
-    // 【重要】释放控制器，防止内存泄漏
     _cardController.dispose();
     _bindController.dispose();
     super.dispose();
@@ -71,6 +79,7 @@ class _LoginInputState extends State<LoginInput> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+
         SizedBox(
           width: 300,
           height: 60,
@@ -107,8 +116,6 @@ class _LoginInputState extends State<LoginInput> {
 
               try {
                 var res = await Login(kami, bind);
-
-                // 检查是否以 '-' 开头 (假设 '-' 代表错误码)
                 if (!res.startsWith('-')) {
                   if (kDebugMode) {
                     print("登录成功: $res");
@@ -123,12 +130,11 @@ class _LoginInputState extends State<LoginInput> {
                   }
                   var ress = '未知错误！';
                   if (res.startsWith('-83001') || res.startsWith('-83002')) {
-                    ress = '卡密不存在！';
+                    ress = l10n.error_no_kami;
                   }
                   if (res.startsWith('-83008')) {
-                    ress = '绑定码错误！！';
+                    ress =l10n.error_bind_code;
                   }
-
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
