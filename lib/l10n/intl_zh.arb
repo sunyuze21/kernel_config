@@ -1,4 +1,5 @@
 {
+  "chose_kernel_config":"请选择内核相关文件",
   "back":"返回",
   "error_bind_code":"绑定码错误！",
   "error_no_kami":"卡密不存在!",

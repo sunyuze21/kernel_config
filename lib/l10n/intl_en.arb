@@ -1,4 +1,5 @@
 {
+ "chose_kernel_config":"Select kernel related files",
   "back":"back",
   "error_bind_code":"bind code error!",
   "error_no_kami":"License key not found!",
